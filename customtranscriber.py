@@ -10,15 +10,15 @@ def transcribe_podcast():
         subprocess.run(["pip3", "freeze"], stdout=file) 
     file.close()
     #uninstalls all non-essential packages in environment
-    subprocess.run(["pip3", "uninstall", "-r", "uninstall.txt", "-y"])
+    subprocess.run(["pip3", "uninstall", "-r", "uninstall.txt", "-y"], stdout=subprocess.DEVNULL)
     #installs necessary packages
-    subprocess.run(["pip3", "install", "-r", "startingreqs.txt"])
+    subprocess.run(["pip3", "install", "-r", "startingreqs.txt"], stdout=subprocess.DEVNULL)
 
     from faster_whisper import WhisperModel
     import ctranslate2
 
 
-    podcastfolder = "./Podcasts"
+    podcastfolder = "./Podcast"
     podcastfiles = []
     for file in os.listdir(podcastfolder):
         if file != ".DS_Store":
