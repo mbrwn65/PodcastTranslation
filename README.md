@@ -27,6 +27,7 @@ Next, I used the [MarianMT](https://huggingface.co/docs/transformers/en/model_do
 Below is the implementation:
 
 <img width="655" alt="Translation Model" src="https://github.com/user-attachments/assets/b8934bcb-90b9-437c-9c11-dd204ac1974e">
+
 The output from this model is added to the "translation" list, then saved as a .txt file in the same format as the transcript to be made into a dictionary for mapping transcript:translation in the GUI.
 
 ________________________________________
