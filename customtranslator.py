@@ -2,9 +2,10 @@ def translate_transcript():
     import os
     import sys
     import subprocess
+    
     if not "venv" in sys.executable:
         raise EnvironmentError("The script must be run in a virtual environment with ipykernel installed. Virtual environment name must contain 'venv' as a safeguard")
-
+    
     subprocess.run(["pip3", "install", "-r", "additionalreqs.txt"], stdout=subprocess.DEVNULL)
 
     import pprint

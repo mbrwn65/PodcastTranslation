@@ -1,5 +1,8 @@
-
+import sys
 import subprocess
+
+if not "venv" in sys.executable:
+    raise EnvironmentError("The script must be run in a virtual environment with ipykernel installed. Virtual environment name must contain 'venv' as a safeguard")
 
 user_input = input("(y/n) Would you like to uninstall all existing packages and install the necessary requirements from startingreqs.txt?: ")
 
